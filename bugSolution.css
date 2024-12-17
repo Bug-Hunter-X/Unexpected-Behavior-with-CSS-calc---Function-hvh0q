@@ -1,0 +1,25 @@
+/* bugSolution.css */
+/* Correcting unit inconsistencies */
+.correct-units {
+  width: calc(100% - 10px);
+}
+
+/* Correcting operator precedence using parentheses */
+.correct-precedence {
+  width: calc((100% - 20px) / 2);
+}
+
+/* Fixing nested calc() */
+.correct-nesting {
+  width: calc(50% + calc(25% - 10px));
+}
+
+/* Handling older browsers */
+.fallback {
+  width: 90%; /* fallback if calc() is not supported */
+}
+@supports (width: calc(100% - 10px)) {
+  .fallback {
+    width: calc(100% - 10px);
+  }
+}
